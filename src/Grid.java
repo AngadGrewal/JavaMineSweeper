@@ -46,11 +46,7 @@ public class Grid {
                     // now loop using the boundaries calculated above
                     for (int x2 = xMin; x2 <= xMax; x2++) {
                         for (int y2 = yMin; y2 <= yMax; y2++) {
-                            // check to make sure not the same tile
-                            if (x2 != x || y2 != y) {
-                                // if neighbour is a bomb, then increment count by 1
-                                count += (gridArray[x2][y2].isBomb() ? 1 : 0);
-                            }
+                            count += (gridArray[x2][y2].isBomb() ? 1 : 0);
                         }
                     }
                     gridArray[x][y].setValue(count);
